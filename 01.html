@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>This is new</h1>
+    </head>
+<body>
+    <h4>This is second headinng</h4>
+    <p>
+        A paragraph is a series of sentences that
+         are organized and coherent, and are all related to
+         a single topic. <strong>every piece bold letters</strong>  of writing you
+         do that is longer <em>italic like</em> a few sentences <a href="https://www.google.lk/?gfe_rd=cr&dcr=0&ei=3BaUWpSFLoXmugSnqYyYAQ">link to google using a tag</a> be organized
+          into paragraphs
+          <a href="https://www.google.lk/?gfe_rd=cr&dcr=0&ei=3BaUWpSFLoXmugSnqYyYAQ" target="_blank">link to google using a tag with a new tab</a>.
+    </p>
+    <a href="">This is unorderd list</a>
+    <ul>
+        <li>Gayashan</li>
+        <li>Madu</li>
+    </ul>
+    <a href="">This is ordered list</a>
+    <ol>
+        <li>Gayashan 01</li>
+        <li>Madhumadavo</li>
+    </ol>
+    <table>
+        <tbody>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Description</th>
+                </tr>  
+            </thead>
+            <tr>
+                <td>Gayashan</td>
+                <td>gaya@gmail.com</td>
+                <td>A good boy</td>
+            </tr>
+            <tr>
+                <td>Madumadhavi</td>
+                <td>madu@gmail.com</td>
+                <td>Sutti bulu</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <hr>
+    <form action="onSubmit">
+        <div>
+            <label for="FirstName">FirstName</label>
+            <input type="text" name="firstName">
+        </div>
+        <br>
+        <div>
+            <label for="LastName">LastName</label>
+            <input type="text" name="lastName">
+        </div>
+        <br>
+        <div>
+            <label for="textarea">Description</label>
+            <textarea name="message" id="" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="gender">Gender</label>
+            <select name="gender" id="">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="DateOfBirth">Birth Day</label>
+            <input type="date" name="dateOfBirth">
+        </div>
+        <br>
+        <div>
+            <label for="Age">Age</label>
+            <input type="number" name="age">
+        </div>
+        
+        <br>
+
+        <button type="onSubmit">Enter</button>
+    </form>
+    <!-- <div style="margin-top"></div> -->
+    
+        <script>
+            var colors = ['red','green','blue'];
+            var numbers = [1,4,3,2,7,4,100];
+            colors.push('purple');
+            //alert(colors);
+            alert(numbers.sort());
+            // for(i =0; i<10; i++){
+            //     console.log(i);
+            // }
+
+            // numbers.forEach(function(num){
+            //     console.log(num);
+            // });
+            for(i=0; i<numbers.length;i++){
+                console.log(numbers[i]);
+            }
+
+            //person oblect
+            var person = {
+                firstName : 'Gayashan',
+                lastName : 'Kumarasinghe',
+                age : 25,
+                address : {
+                    street : 'sjj',
+                    route : 'gh'
+                },
+                getName : function(){
+                    return this.firstName +" "+this.lastName;
+                }
+            }
+             console.log(person.getName());
+
+             //Using object constructor
+
+             var apple = new Object();
+             apple.colour = 'red';
+             apple.shape = 'round';
+
+             apple.describe = function(){
+                 return 'color is '+this.colour+' and the shape is ' +this.shape;
+             }
+
+             console.log(apple);
+             console.log(apple.describe());
+
+             //constructor pattern
+              function fruit(name,color,shape){
+                    this.name = name;
+                    this.color = color;
+                    this.shape = shape;
+
+                    this.description = function(){
+                        return 'The fruit is '+this.name+ 'and the color is '+this.color+ ' the shape is '+this.shape;
+                    }
+
+              }
+
+              var melon = new fruit('malon','yellow','round');
+
+              console.log(melon.description());
+
+        </script>
+    
+</body>
+</html>
